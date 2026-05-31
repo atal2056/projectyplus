@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TRC Matching System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script src="deathdata.js"></script>
+<script src="kailali_cases.js"></script>
+</head>
+
+<body>
+
+<!-- LANDING -->
+<div id="landing" class="landing">
+  <div class="card">
+    <h1>सत्य निरुपण तथा मेलमिलाप आयोग</h1>
+    <h2>हाँडिगाउँ, काठमाण्डौ</h2>
+    <h3>File Matching System</h3>
+
+    <button onclick="enterApp()">Enter</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+  <div class="topbar">
+    <button onclick="toggleStorage()">Storage</button>
+    <button onclick="completeMatch()">Complete Match</button>
+  </div>
+
+  <!-- DEATH -->
+  <div class="data-box">
+    <h2>Death Data</h2>
+
+    <input id="deathSearch" placeholder="Search name">
+    <select id="deathDistrict"></select>
+
+    <div class="table-wrapper">
+      <table id="deathTable"></table>
+    </div>
+  </div>
+
+  <!-- KAILALI -->
+  <div class="data-box">
+    <h2>Kailali Cases</h2>
+
+    <input id="kailaliSearch" placeholder="Search name">
+    <select id="kailaliTopic"></select>
+
+    <div class="table-wrapper">
+      <table id="kailaliTable"></table>
+    </div>
+  </div>
+
+</div>
+
+<!-- STORAGE -->
+<div id="storage" class="storage">
+
+  <div class="storage-header">
+    <h2>Storage</h2>
+    <button onclick="toggleStorage()">✕</button>
+  </div>
+
+  <button onclick="clearAllStorage()">Clear All</button>
+  <button onclick="downloadExcel()">Download Excel</button>
+
+  <div class="storage-scroll">
+    <table id="storageTable"></table>
+  </div>
+
+</div>
+
+<!-- PROFILE MODAL -->
+<div id="profileModal" class="profile-modal">
+  <div class="profile-card">
+
+    <div class="profile-header">
+      <h2>Profile Details</h2>
+      <button onclick="closeProfile()">✕</button>
+    </div>
+
+    <div id="profileContent" class="profile-content"></div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

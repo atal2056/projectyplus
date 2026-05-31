@@ -1,0 +1,155 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f4f7fb;
+  color:#1f2937;
+}
+
+.landing{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#e8eef5,#cfdcf5);
+}
+
+.card{
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  text-align:center;
+  width:420px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+button{
+  background:#1f4b99;
+  color:white;
+  padding:8px 12px;
+  border:none;
+  margin:5px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+button:hover{
+  background:#163a75;
+}
+
+#app{padding:10px;}
+
+.data-box{margin-bottom:20px;}
+
+.table-wrapper{
+  max-height:300px;
+  overflow:auto;
+  background:white;
+  border:1px solid #ddd;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th{
+  background:#1f4b99;
+  color:white;
+  position:sticky;
+  top:0;
+}
+
+td,th{
+  border:1px solid #ddd;
+  padding:8px;
+}
+
+/* STORAGE */
+.storage{
+  position:fixed;
+  right:-520px;
+  top:0;
+  width:500px;
+  height:100%;
+  background:white;
+  box-shadow:-5px 0 20px rgba(0,0,0,0.25);
+  transition:0.3s;
+  overflow:hidden;
+  z-index:9999;
+}
+
+.storage.active{
+  right:0;
+}
+
+.storage-header{
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+
+.storage-scroll{
+  height:calc(100% - 120px);
+  overflow:auto;
+  resize:horizontal;
+}
+
+/* PROFILE MODAL */
+.profile-modal{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+}
+
+.profile-card{
+  background:white;
+  width:600px;
+  max-height:80vh;
+  overflow:auto;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  animation:fadeIn 0.3s ease;
+}
+
+.profile-header{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#1f4b99;
+  color:white;
+  border-radius:12px 12px 0 0;
+}
+
+.profile-content{
+  padding:15px;
+}
+
+.profile-row{
+  display:flex;
+  border-bottom:1px solid #eee;
+  padding:8px 0;
+}
+
+.profile-row .label{
+  width:40%;
+  font-weight:bold;
+  color:#1f4b99;
+}
+
+.profile-row .value{
+  width:60%;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(0.9);}
+  to{opacity:1; transform:scale(1);}
+}
